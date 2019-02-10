@@ -1,7 +1,0 @@
-{
-  "name": "chronex",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}

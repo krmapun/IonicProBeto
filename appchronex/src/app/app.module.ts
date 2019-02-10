@@ -9,14 +9,14 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { RegistrarPage } from '../pages/registrar/registrar';
+import { RegisterPage } from '../pages/register/register';
 import { InicioPage } from '../pages/inicio/inicio';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RegistrarPage,
+    RegisterPage,
     InicioPage
   ],
   imports: [
@@ -30,7 +30,7 @@ import { InicioPage } from '../pages/inicio/inicio';
   entryComponents: [
     MyApp,
     HomePage,
-    RegistrarPage,
+    RegisterPage,
     InicioPage
   ],
   providers: [
