@@ -1,0 +1,217 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primaryColor: #6cf,
+  primaryLightColor: rgb(102, 167, 204),
+  primaryDarkColor: #005cc5,
+  secondaryColor: #9c6,
+  secondaryLightColor: #484848,
+  secondaryDarkColor: #000000,
+  primaryTextColor: #000000,
+  secondaryTextColor: #ffffff,
+
+  Morado:#442662,
+  Azul:#0CB7F2,
+  Verde: #009D71,
+  Amarillo: #FFD700,
+  Rojo: #CB1D11,
+  Plateado: #C0C0C0, 
+  Anaranjado:#E87B31,
+
+  
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+.facebook-btn {
+  text-transform: none !important;
+  background-color: #4267b2 !important;
+}
+
+.twitter-btn {
+  text-transform: none !important;
+  background-color: #00ACED !important;
+}
+
+.google-btn {
+  text-transform: none !important;
+  background-color: #d34836 !important;
+}
+
+.fondoHome{  
+  /*background-color: #cccccc !important;*/
+  width:auto;      
+}
+
+.line-thru{
+  display: block;
+  font-size: .875em;
+  margin-bottom: 1em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.line-thru:before {
+  width: 40px;
+  height: 10px;
+  background-color: #fff;
+  content: '';
+  margin: -5px 0 0 -20px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+}
+
+.line-thru:after {
+  border-bottom: 1px solid #dfe0e6;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 49%;
+  width: 100%;
+  z-index: -2;
+}
+
+
+.sign-up {
+  background: #ffffff;
+  color: #222326;
+  min-width: 320px;
+  position: relative;
+}
+
+.l-signup-header {
+  background-color: #fff;
+  padding: .5em 0;  
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.l-signup-header .spotify-logo {
+  width: 126px;
+  height: 38px;  
+  padding-left:25px;
+}
+
+.l-signup-body {
+  background-color: #fff;
+  border-top: 1px solid #dfe0e6;
+}
+
+.l-box-content {
+  margin: 0 auto;
+  max-width: 26.875em;
+}
+
+.l-box-content > img{  
+  margin: 0 auto;
+  padding-left: 50px;  
+}
+
+.l-signup-header > .spotify-logo {
+  width: 126px;
+  height: 38px;
+}
+
+.l-signup-body {
+  background-color: #fff;
+  border-top: 1px solid #dfe0e6;
+  margin: 0 auto;
+}
+
+.register > .content > h2{
+  color: #1c1c1f;
+  margin-bottom: 1em;
+  font-size: 18px;
+  text-align: center;
+}
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

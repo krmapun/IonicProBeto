@@ -1,0 +1,124 @@
+<!--
+  Generated template for the AddUserActivityPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primaryDarkColor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>24/7</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="calendar" item-start></ion-icon>
+      <ion-label>Al Día </ion-label>
+      <ion-datetime disabled displayFormat="DD/MM/YYYY" [(ngModel)]="userActivity.d_fecha"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <!-- Etiqueta cabecera -->
+    <ion-list-header>
+      Actividades
+    </ion-list-header>
+    <ion-item (press)="tooltips($event,'s')">
+      <ion-icon name="cloudy-night" item-start color="Morado"></ion-icon>
+      <ion-label>Sueño </ion-label>
+      <ion-datetime style="color:#442662;" displayFormat="H:mm" pickerFormat="H:mm" [(ngModel)]="userActivity.d_suenho_descanso"
+        hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,..." minuteValues="0,15,30,45,60,...">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item (press)="tooltips($event,'a')">
+      <ion-icon name="nutrition" item-start color="Azul"></ion-icon>
+      <ion-label>Alimento</ion-label>
+      <ion-datetime style="color:#0CB7F2;" displayFormat="H:mm" pickerFormat="H:mm" [(ngModel)]="userActivity.d_alimento" hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,..."
+        minuteValues="0,15,30,45,60,...">
+      </ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <!-- Cabecera  Yo   -->
+    <ion-list-header>
+      Yo
+    </ion-list-header>
+    <!-- Cabecera  Yo   -->
+
+    <ion-item (press)="tooltips($event,'c')">
+      <ion-icon name="body" item-start color="Verde"></ion-icon>
+      <ion-label>Cuerpo</ion-label>
+      <ion-datetime style="color:#009D71;" displayFormat="H:mm" pickerFormat="H:mm" [(ngModel)]="userActivity.d_yo_cuerpo" hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,..."
+        minuteValues="0,15,30,45,60,...">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item (press)="tooltips($event,'m')">
+      <ion-icon name="book" item-start color="Verde"></ion-icon>
+      <ion-label>Mente</ion-label>
+      <ion-datetime style="color:#009D71;" displayFormat="H:mm" pickerFormat="H:mm" [(ngModel)]="userActivity.d_yo_mente" hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,..."
+        minuteValues="0,15,30,45,60,...">
+      </ion-datetime>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-item (press)="tooltips($event,'o')">
+      <ion-icon name="people" item-start color="Amarillo"></ion-icon>
+      <ion-label>Otros</ion-label>
+      <ion-datetime style="color:#FFD700;" displayFormat="H:mm" pickerFormat="H:mm" [(ngModel)]="userActivity.d_otros" hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,..."
+        minuteValues="0,15,30,45,60,...">
+      </ion-datetime>
+    </ion-item>
+
+
+    <ion-item (press)="tooltips($event,'t')">
+      <ion-icon name="construct" item-start color="Rojo"></ion-icon>
+      <ion-label>Trabajo</ion-label>
+      <ion-datetime style="color:#CB1D11;" displayFormat="H:mm" pickerFormat="H:mm" [(ngModel)]="userActivity.d_trabajo" hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,..."
+        minuteValues="0,15,30,45,60,...">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item (press)="tooltips($event,'h')">
+      <ion-icon name="md-globe" item-start color="Plateado"></ion-icon>
+      <ion-label>Humanidad</ion-label>
+      <ion-datetime style="color:#C0C0C0;" displayFormat="H:mm" pickerFormat="H:mm" [(ngModel)]="userActivity.d_humanidad" hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,..."
+        minuteValues="0,15,30,45,60,...">
+      </ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <!-- Cabecera  Pareja   -->
+    <ion-list-header>
+
+    </ion-list-header>
+    <!-- Cabecera  Pareja   -->
+    <ion-item (press)="tooltips($event,'p')">
+      <ion-icon name="heart" item-start color="Anaranjado"></ion-icon>
+      <ion-label>Pareja</ion-label>
+      <ion-datetime style="color:#E87B31;" displayFormat="H:mm" pickerFormat="H:mm" [(ngModel)]="userActivity.d_pareja" hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,..."
+        minuteValues="0,15,30,45,60,...">
+      </ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-icon name="time" item-start></ion-icon>
+    <ion-label>Total {{ sumarHoras(userActivity) }} Horas</ion-label>
+  </ion-item>
+
+  <button ion-button block (click)="EditUserActivity(userActivity)">Guardar</button>
+
+</ion-content>
