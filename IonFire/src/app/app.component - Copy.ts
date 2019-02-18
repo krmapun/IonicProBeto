@@ -47,9 +47,9 @@ export class MyApp {
 
     this.pages = [
       { title: 'Inicio',        component: HomePage, icon: 'home', color: 'dark' },
-      { title: '¿Qué Quiero?', component: WhatDoIWant2Page, icon: 'ios-book', color: 'dark' },  
-      { title: '24/7', component: AgregarPage, icon: 'add-circle', color: 'dark' },      
-      { title: '¿Cómo Estoy?',    component: TabsPage, icon: 'filing', color: 'dark' },/* paper, podium */
+      { title: 'Ingresar Tiempos', component: WhatDoIWant2Page, icon: 'ios-book', color: 'dark' },  
+      // { title: '24/7', component: AgregarPage, icon: 'add-circle', color: 'dark' },      
+      { title: 'Graficos',    component: TabsPage, icon: 'filing', color: 'dark' },/* paper, podium */
       { title: 'Guía rápida',     component: GuiaPage, icon: 'help', color: 'dark' },
       { title: 'Acerca de',     component: AcercaPage, icon: 'information-circle', color: 'dark' }      
     ];
