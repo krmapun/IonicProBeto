@@ -1,16 +1,25 @@
 page-signup {
+    ion-content{
+        background-color: #99cc99 !important;
+    }
     .spotify {
-        width: 300px;
-        height: 200px;
-     }
+       width: 400px;
+       height: 300px;
+    }
+    ion-item{
+        border-radius: 10px;
+    }
+    ion-item ion-input input{
+        color: black;
+        border-radius: 10px;
+    }
+    .content{
+        text-align: center;
+    }
+
+    .alink{
+        color: #442be5;
+    }
  
 
-}
-
-ion-img {
-    display: inline-block;
-    min-width: 20px;
-    min-height: 20px;
-    background: #ffffff;
-    contain: strict;
 }
