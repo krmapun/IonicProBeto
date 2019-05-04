@@ -24,54 +24,6 @@ import 'rxjs/add/operator/take';
 })
 export class WhatDoIWant2Page {
 
-  tooltips(e, type) {
-
-    let title = "";
-    let subtitle = "";
-
-    switch (type) {
-      case 's':
-        title = "Sueño";
-        subtitle = "Actividades relacionadas con dormir: Soñar, conciliar el sueño, tomar una siesta, etc.";
-        break;
-      case 'a':
-        title = "Alimento";
-        subtitle = "Actividades relacionadas con la comida: Cocina, siembra, mercado, medicina, etc.";
-        break;
-      case 'c':
-        title = "Yo Cuerpo";
-        subtitle = "Actividades relacionadas con el bienestar corporal: Ejercicio, salud, higiene, etc.";
-        break;
-      case 'm':
-        title = "Yo Mente";
-        subtitle = "Actividades para ejercitar el cerebro y la memoria: Leer, aprender un idioma, música, ocio, etc.";
-        break;
-      case 'o':
-        title = "Otros";
-        subtitle = "Actividades dedicadas a las relaciones humanas: Hablar con otros, familia, amigos, conocer nuevas personas, etc.";
-        break;
-      case 't':
-        title = "Trabajo";
-        subtitle = "Actividades que impliquen un esfuerzo productivo: Tareas domésticas, empleo, estudio, etc.";
-        break;
-      case 'h':
-        title = "Humanidad";
-        subtitle = "Actos que te recuerden que eres un ser humano: Observar la naturaleza, ayudar al otro, orar o meditar, caminar, viajar, etc.";
-        break;
-      case 'p':
-        title = "Pareja";
-        subtitle = "Actividades que realizas con quien compartes todo en tu vida. Escuchar, intimar, resolver problemas, etc. (Si no tienes pareja puede quedar en 0)";
-        break;
-    }
-
-    let alert = this.alertCtrl.create({
-      title: title,
-      subTitle: subtitle,
-      buttons: ['OK']
-    });
-    alert.present();
-  }
-
   //	Create a new WhatDoIWant Object
   whatDoIWant = {
     d_suenho_descanso: "",
