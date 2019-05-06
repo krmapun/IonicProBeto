@@ -4,20 +4,20 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #9c6;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-shade: rgb(125, 167, 84);
+  --ion-color-primary-tint: rgb(168, 224, 111);
 
   /** secondary **/
-  --ion-color-secondary: #0cd1e8;
+  --ion-color-secondary: #5538aa;
   --ion-color-secondary-rgb: 12, 209, 232;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #0bb8cc;
-  --ion-color-secondary-tint: #24d6ea;
+  --ion-color-secondary-shade: #4a3194;
+  --ion-color-secondary-tint: #6240c7;
 
   /** tertiary **/
   --ion-color-tertiary: #7044ff;
@@ -75,3 +75,30 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 }
+
+$colors: (
+  primaryColor: #6cf,
+  primaryLightColor: rgb(102, 167, 204),
+  primaryDarkColor: #5538aa,
+  secondaryColor: #9c6,
+  secondaryLightColor: #484848,
+  secondaryDarkColor: #000000,
+  primaryTextColor: #000000,
+  secondaryTextColor: #ffffff,
+
+  Morado:#442662,
+  Azul:#0CB7F2,
+  Verde: #009D71,
+  Amarillo: #FFD700,
+  Rojo: #CB1D11,
+  Plateado: #C0C0C0, 
+  Anaranjado:#E87B31,
+
+  
+  primary:    #d1fff3,
+  secondary:  #442be5,
+  danger:     #f53d3d,
+  light:      #99cc99,
+  dark:       #009c91
+);
+

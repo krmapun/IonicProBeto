@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Recordar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <img
+      class="img-signup"
+      src="../../assets/images/logo_chronex.png"
+    >
+
+    <section>
+      <div class="content">
+        <h2>
+          Te enviaremos un Email para que puedas Reiniciar la Contraseña
+        </h2>
+
+        <form #ResetPasswordForm="ngForm">
+            <ion-item>
+              <ion-input
+                type="email"
+                autocorrect="off"
+                placeholder="correo"
+                autocapitalize="none"
+                name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                required="required"
+              ></ion-input>
+            </ion-item>
+              <ion-button
+                ion-button="ion-button"
+                [disabled]="!ResetPasswordForm.form.valid"
+                block="block"
+                round="round"
+              >Autorizar Reinicio</ion-button>
+        </form>
+      </div>
+    </section>
+  </div>
+</ion-content>

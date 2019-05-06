@@ -3,8 +3,21 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyA9FCJbxjF26tdrmMdg_akc1teaNKnpecM",
+    authDomain: "db-cronex.firebaseapp.com",
+    databaseURL: "https://db-cronex.firebaseio.com",
+    projectId: "db-cronex",
+    storageBucket: "db-cronex.appspot.com",
+    messagingSenderId: "321983061942",
+    appId: "1:321983061942:web:402cf5a6ba3f97c8"
+  }
 };
+
+
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file

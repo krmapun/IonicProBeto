@@ -1,0 +1,31 @@
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+        height: 100%;
+        width: 100%;
+        background: #99cc99;
+        color: #222326;
+    }
+    .titulo-signin{
+        margin: 0 0 20px 0;
+    }
+    .img-signin{
+        height: 50%;
+        width: 100%;
+        margin-bottom: -25px;
+    }
+    .content{
+        text-align: center;
+    }
+    p .alink{
+        font-size: 13px;
+        color: #442be5;
+    }
+    p {
+        font-size: 12px;
+    }
+    ion-item {
+        --border-radius : 10px !important;
+    }
+
+

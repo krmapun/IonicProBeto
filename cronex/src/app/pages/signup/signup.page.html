@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <img
+      class="img-signup"
+      src="../../assets/images/logo_chronex.png"
+    >
+
+    <section class="register">
+      <div class="content">
+        <h2>
+          Regístrese con su Dirección de Correo Electrónico
+        </h2>
+
+        <form #signUpForm="ngForm">
+          <ion-item>
+            <ion-input
+              type="email"
+              autocorrect="off"
+              placeholder="correo"
+              autocapitalize="none"
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+              required="required"
+            ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input
+              type="password"
+              name="password"
+              placeholder="contraseña"
+              required="required"
+              minlength="6"
+            ></ion-input>
+          </ion-item>
+
+          <ion-button
+            ion-button="ion-button"
+            [disabled]="!signUpForm.form.valid"
+            block="block"
+            color="secondary"
+            round="round"
+          >Registrarse</ion-button>
+        </form>
+      </div>
+    </section>
+  </div>
+</ion-content>
