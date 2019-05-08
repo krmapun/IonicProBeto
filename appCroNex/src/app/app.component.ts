@@ -22,7 +22,7 @@ export class AppComponent {
     },
     {
       title: 'Ingresa Tus tareas',
-      url: '',
+      url: '/task',
       icon: 'ios-book'
     },
     {

@@ -13,7 +13,10 @@ const routes: Routes = [
   { path: 'list', loadChildren: './pages/list/list.module#ListPageModule' },
   { path: 'signin', loadChildren: './pages/signin/signin.module#SigninPageModule' },
   { path: 'signup', loadChildren: './pages/signup/signup.module#SignupPageModule'},
-  { path: 'reset-pass', loadChildren: './pages/reset-pass/reset-pass.module#ResetPassPageModule' }
+  { path: 'reset-pass', loadChildren: './pages/reset-pass/reset-pass.module#ResetPassPageModule' },
+  { path: 'details/:id', loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule' },
+  { path: 'details' , loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule'},
+  { path: 'task', loadChildren: './pages/task/task.module#TaskPageModule' }
 ];
 
 @NgModule({

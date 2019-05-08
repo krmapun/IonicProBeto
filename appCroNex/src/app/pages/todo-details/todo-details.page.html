@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/task"></ion-back-button>
+      </ion-buttons>
+    <ion-title>
+      <img class="home-img" src="../../assets/images/text_chronex2.png" />
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content padding>
+  <ion-title text-center>Modificar</ion-title>
+  <ion-list lines="full">
+      <ion-item *ngIf="todo">
+        <ion-input required type="text" placeholder="tarea" [(ngModel)]="todo.task">
+
+        </ion-input>
+      </ion-item>
+      <ion-item *ngIf="todo">
+        <ion-input required type="text" placeholder="prioridad" [(ngModel)]="todo.priority">
+
+        </ion-input>
+      </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="saveTodo()">Guardar Tarea</ion-button> 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
+    <ion-fab-button (click)="onRemove(todoId)" color="danger" routerLink="/task" routerDirection ="forward" >
+      <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+  
