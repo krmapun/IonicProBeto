@@ -1,0 +1,7 @@
+{
+  "name": "appCroNex",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
