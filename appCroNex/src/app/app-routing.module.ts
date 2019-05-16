@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'reset-pass', loadChildren: './pages/reset-pass/reset-pass.module#ResetPassPageModule' },
   { path: 'details/:id', loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule' },
   { path: 'details' , loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule'},
-  { path: 'task', loadChildren: './pages/task/task.module#TaskPageModule' }
+  { path: 'task', loadChildren: './pages/task/task.module#TaskPageModule' },
+  { path: 'acercade', loadChildren: './pages/acercade/acercade.module#AcercadePageModule' }
 ];
 
 @NgModule({

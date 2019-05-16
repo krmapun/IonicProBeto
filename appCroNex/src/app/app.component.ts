@@ -37,7 +37,7 @@ export class AppComponent {
     },
     {
       title: 'Acerca de Cronex',
-      url: '',
+      url: '/acercade',
       icon: 'information-circle'
     }
 
