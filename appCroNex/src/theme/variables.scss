@@ -74,6 +74,27 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1000px) {
+  .ion-page {
+    background-color: #9c9;
+    padding: 0px 230px 0 230px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+}
 }
 
 $colors: (

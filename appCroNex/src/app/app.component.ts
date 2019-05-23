@@ -32,7 +32,7 @@ export class AppComponent {
     },
     {
       title: 'Guia Rapida',
-      url: '',
+      url: '/guia',
       icon: 'help'
     },
     {

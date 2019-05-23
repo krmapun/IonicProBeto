@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../servicios/auth.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +12,7 @@ export class SignupPage implements OnInit {
   public email: string;
   public password: string;
 
-  constructor(public authservice: AuthService) {}
+  constructor(public authservice: AuthService, private menu: MenuController) {}
 
   ngOnInit() {
   }
@@ -23,4 +24,7 @@ export class SignupPage implements OnInit {
     }).catch(err => console.log(err));
   }
 
+  ionViewWillEnter() {
+    this.menu.enable(false);
+  }
 }

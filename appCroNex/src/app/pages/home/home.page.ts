@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../servicios/auth.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,13 @@ import { AuthService } from '../../servicios/auth.service';
 })
 export class HomePage {
 
-  constructor (public authservice : AuthService){}
+  constructor (public authservice : AuthService, private menu: MenuController){}
   signOut(){
     this.authservice.logout();
   }
+
+  ionViewWillEnter() {
+    this.menu.enable(true);
+  }
+
 }

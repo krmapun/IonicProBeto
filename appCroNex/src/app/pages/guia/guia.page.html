@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img class="home-img" src="../../assets/images/text_chronex2.png" />
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button icon-only (click)="signOut()">
+        <ion-icon name="log-out"></ion-icon> 
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content class="guia-page">
+    <ion-slides pager="true">
+      <ion-slide *ngFor="let slide of slides">
+        <ion-grid>
+          <ion-row class="row-center">
+            <ion-col class="text-center">
+              <ion-img class="imgclass" [src]="slide.image" ></ion-img>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <h2> {{slide.title}} </h2>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p> {{slide.description}} </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+      <ion-slide>
+        <ion-grid>
+            <ion-row class="row-center">
+              <ion-col class="text-center">
+                <ion-img width="220" height="62" src="../../assets/images/logo_chronex.png"></ion-img>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <h2>INGRESA TUS TAREAS</h2>
+              </ion-col>
+              <ion-col>
+                <ion-button 
+                  large 
+                  color="secondary"
+                  [routerLink]="['/task']"
+                  block="block"
+                  >
+                  Tareas
+                  <ion-icon name="arrow-forward"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-slide>
+    </ion-slides>
+</ion-content>
