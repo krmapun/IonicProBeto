@@ -14,13 +14,15 @@
   <ion-list lines="full">
       <ion-item *ngIf="todo">
         <ion-input required type="text" placeholder="tarea" [(ngModel)]="todo.task">
-
         </ion-input>
       </ion-item>
       <ion-item *ngIf="todo">
         <ion-input required type="text" placeholder="prioridad" [(ngModel)]="todo.priority">
-
         </ion-input>
+      </ion-item>
+      <ion-item *ngIf="todo">
+          <ion-label>Facturable :</ion-label> 
+          <ion-checkbox slot="end" [(ngModel)]="todo.isCheck"></ion-checkbox>
       </ion-item>
   </ion-list>
   <ion-button expand="full" (click)="saveTodo()">Guardar Tarea</ion-button> 

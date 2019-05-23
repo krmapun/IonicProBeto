@@ -13,7 +13,8 @@ export class TodoDetailsPage implements OnInit {
 
   todo: TaskI = {
     task: '',
-    priority: 0
+    priority: 0,
+    isCheck: false,
   };
   todoId = null;
 
