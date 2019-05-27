@@ -3,7 +3,8 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { TaskI } from '../models/task.interface';
-import { Storage } from '@ionic/storage';
+import { GlobalService } from '../servicios/global.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +12,17 @@ import { Storage } from '@ionic/storage';
 export class TodoService {
 
   
+  
   private todosCollection: AngularFirestoreCollection<TaskI>;
   private todos: Observable<TaskI[]>;
-  private usuario: '';
+  public valor: object;
+
 
   constructor(db: AngularFirestore,
-              private storage: Storage) 
+              private globalService: GlobalService)
   {
-    console.log(this.usuario);
-    this.todosCollection = db.collection<TaskI>('todos',ref => ref.where('usuario','==',''));
+    const usuid = window.localStorage.getItem('idusu');
+    this.todosCollection = db.collection<TaskI>('todos', ref => ref.where('usuario', '==', usuid));
     this.todos = this.todosCollection.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a => {
@@ -29,14 +32,6 @@ export class TodoService {
         });
       })
     );
-  }
-
-  async getKey(key:string): Promise<void>{
-    return await this.storage.get(key)
-    .then((val) => {
-      this.usuario = val;
-      console.log(this.usuario)
-    });
   }
 
   getTodos() {
