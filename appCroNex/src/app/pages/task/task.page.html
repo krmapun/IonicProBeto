@@ -16,14 +16,22 @@
 
 <ion-content padding>
   <ion-title text-center>Tus Tareas</ion-title>
+    <ion-item >
+      <ion-label>
+        Nombre
+      </ion-label>
+      <ion-label >
+        horas
+      </ion-label>
+    </ion-item>
   <ion-list>
     <ion-item-sliding *ngFor="let todo of todos">
-      <ion-item lines="inset" lines="inset" button [routerLink]="['/details', todo.id]">
+      <ion-item lines="inset"  button [routerLink]="['/details', todo.id]">
         <ion-label>
-          {{todo.task}}
+          <h3>{{todo.task}}</h3>
         </ion-label>
-        <ion-label>
-          {{todo.id}}
+        <ion-label> 
+          <h3>{{todo.priority}}</h3>
         </ion-label>
       </ion-item>
       <ion-item-options  color="secondary">

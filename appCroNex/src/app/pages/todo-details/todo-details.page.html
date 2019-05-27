@@ -13,16 +13,24 @@
   <ion-title text-center>Modificar</ion-title>
   <ion-list lines="full">
       <ion-item *ngIf="todo">
-        <ion-input required type="text" placeholder="tarea" [(ngModel)]="todo.task">
+        <ion-label position="floating">Nombre de la tarea:</ion-label> 
+        <ion-input required type="text" placeholder="Ejemplo login" [(ngModel)]="todo.task">
         </ion-input>
       </ion-item>
       <ion-item *ngIf="todo">
+        <ion-label position="floating">Tiempo en horas :</ion-label> 
         <ion-input required type="text" placeholder="prioridad" [(ngModel)]="todo.priority">
         </ion-input>
       </ion-item>
       <ion-item *ngIf="todo">
-          <ion-label>Facturable :</ion-label> 
-          <ion-checkbox slot="end" [(ngModel)]="todo.isCheck"></ion-checkbox>
+          <ion-label position="fixed">Importancia:</ion-label> 
+          <ion-range color="danger" pin="true" [(ngModel)]="todo.importancia" ></ion-range>
+          <!-- <ion-input required type="text" placeholder="prioridad" [(ngModel)]="todo.priority">
+          </ion-input> -->
+      </ion-item>
+      <ion-item *ngIf="todo">
+          <ion-label position="fixed" slot="start">¿facturable? :</ion-label> 
+          <ion-checkbox slot="start" [(ngModel)]="todo.isCheck"></ion-checkbox>
       </ion-item>
   </ion-list>
   <ion-button expand="full" (click)="saveTodo()">Guardar Tarea</ion-button> 

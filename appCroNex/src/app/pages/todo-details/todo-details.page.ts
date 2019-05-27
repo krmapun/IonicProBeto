@@ -3,6 +3,7 @@ import { TaskI } from '../../models/task.interface';
 import { TodoService } from '../../servicios/todo.service';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, LoadingController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-todo-details',
@@ -12,9 +13,11 @@ import { NavController, LoadingController } from '@ionic/angular';
 export class TodoDetailsPage implements OnInit {
 
   todo: TaskI = {
+    usuario: '',
     task: '',
     priority: 0,
     isCheck: false,
+    importancia: 50,
   };
   todoId = null;
 
@@ -22,10 +25,15 @@ export class TodoDetailsPage implements OnInit {
     private route: ActivatedRoute,
     private nav: NavController,
     private todoservice: TodoService,
-    private loadingcontroller: LoadingController
+    private loadingcontroller: LoadingController,
+    private storage: Storage
   ) { }
 
   ngOnInit() {
+
+    this.storage.get('idusu').then((val) => {
+      this.todo.usuario = val
+    });
     this.todoId = this.route.snapshot.params.id;
     if (this.todoId) {
       this.loadTodo();

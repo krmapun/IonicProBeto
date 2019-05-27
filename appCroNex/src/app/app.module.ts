@@ -13,6 +13,7 @@ import { firebaseConfig } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,10 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    IonicStorageModule.forRoot({
+      name: '__mydbcronex',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    }),
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
