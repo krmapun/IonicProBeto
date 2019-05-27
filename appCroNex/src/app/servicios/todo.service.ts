@@ -3,7 +3,6 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { TaskI } from '../models/task.interface';
-import { GlobalService } from '../servicios/global.service';
 
 
 @Injectable({
@@ -18,8 +17,7 @@ export class TodoService {
   public valor: object;
 
 
-  constructor(db: AngularFirestore,
-              private globalService: GlobalService)
+  constructor(db: AngularFirestore)
   {
     const usuid = window.localStorage.getItem('idusu');
     this.todosCollection = db.collection<TaskI>('todos', ref => ref.where('usuario', '==', usuid));

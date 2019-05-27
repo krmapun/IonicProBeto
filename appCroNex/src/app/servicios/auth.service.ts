@@ -20,6 +20,7 @@ export class AuthService {
   }
 
   logout(){
+    window.localStorage.clear();
     this.AFauth.auth.signOut().then( auth => {
       this.router.navigate(['/signin']);
     });

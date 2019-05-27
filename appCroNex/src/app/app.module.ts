@@ -14,7 +14,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { IonicStorageModule } from '@ionic/storage';
-import { GlobalService } from '../app/servicios/global.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,7 +33,6 @@ import { GlobalService } from '../app/servicios/global.service';
   providers: [
     StatusBar,
     SplashScreen,
-    GlobalService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

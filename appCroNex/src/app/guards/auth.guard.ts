@@ -20,15 +20,16 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       return this.AFauth.authState.pipe(map( auth => {
-        this.storage.set('idusu', auth.uid);
-        window.localStorage.setItem("idusu", auth.uid)
+        // 
         //console.log(auth.uid);
         if (isNullOrUndefined(auth)) {
           this.router.navigate(['/signin']);
           return false;
         } else {
+          this.storage.set('idusu', auth.uid);
+          window.localStorage.setItem("idusu", auth.uid);
           return true;
         }
-      }))
+      }));
     }
 }
