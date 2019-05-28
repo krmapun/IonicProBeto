@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'details' , loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule'},
   { path: 'task', loadChildren: './pages/task/task.module#TaskPageModule' },
   { path: 'acercade', loadChildren: './pages/acercade/acercade.module#AcercadePageModule' },
-  { path: 'guia', loadChildren: './pages/guia/guia.module#GuiaPageModule' }
+  { path: 'guia', loadChildren: './pages/guia/guia.module#GuiaPageModule' },
+  { path: 'calculador', loadChildren: './pages/calculador/calculador.module#CalculadorPageModule' }
 ];
 
 @NgModule({

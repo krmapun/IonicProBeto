@@ -1,0 +1,115 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        <img class="home-img" src="../../assets/images/text_chronex2.png" />
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-button icon-only (click)="signOut()">
+          <ion-icon name="log-out"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header> 
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="secondary">Calculadora freelance</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+        <form 
+        >
+        <ion-row>
+          <ion-col align-self-start >
+            <ion-item>
+              <ion-label position="floating"><h3>Salario Mensual neto pretendido</h3></ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col align-self-start >
+            <ion-item>
+              <ion-label position="floating"><h4>Computador (cada 2 años)</h4></ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col align-self-start size="6">
+              <ion-item>
+                <ion-label position="floating"><h3>Alquiler</h3></ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col align-self-start size="6">
+              <ion-item>
+                <ion-label position="floating"><h3>Télefono/Internet</h3></ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col align-self-start size="6">
+              <ion-item>
+                <ion-label position="floating"><h3>Transporte</h3></ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col align-self-start size="6">
+              <ion-item>
+                <ion-label position="floating"><h3>Alimentación</h3></ion-label>
+                <ion-input  type="number"></ion-input>
+              </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col align-self-start size="6">
+              <ion-item>
+                <ion-label position="floating"><h3>Software</h3></ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col align-self-start size="6">
+              <ion-item>
+                <ion-label position="floating"><h3>Salud/Pensión</h3></ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col align-self-start size="6">
+            <ion-item>
+              <ion-label position="floating"><h3>Impuestos</h3></ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col align-self-start size="6">
+            <ion-item>
+              <ion-label position="floating"><h3>Educación</h3></ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col align-self-start size="6">
+            <ion-item>
+              <ion-label position="floating"><h3>Personales</h3></ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col align-self-start size="6">
+            <ion-item>
+              <ion-label position="floating"><h3>otros</h3></ion-label>
+              <ion-input required type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-button ion-button type="submit" expand="full" >Calcular</ion-button>
+        </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

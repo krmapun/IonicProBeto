@@ -17,7 +17,7 @@ export class AppComponent {
     },
     {
       title: 'Calcula',
-      url: '',
+      url: '/calculador',
       icon: 'add-circle'
     },
     {
