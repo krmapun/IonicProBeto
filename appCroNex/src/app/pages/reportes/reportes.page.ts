@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../servicios/auth.service';
-import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
-import { TaskI } from '../../models/task.interface';
-import { map } from 'rxjs/operators';
-import { OrderBy } from '../../../../../IonFire/src/app/orderby.pipe';
 
 @Component({
   selector: 'app-reportes',
@@ -15,7 +12,7 @@ export class ReportesPage implements OnInit {
 
   items: Observable<any[]>;
   tasks: Observable<any[]>;
-  binding: number;
+ 
 
   constructor(public authservice: AuthService,
               public db: AngularFirestore)
@@ -27,9 +24,6 @@ export class ReportesPage implements OnInit {
   }
 
   ngOnInit() {
-    const usuid = window.localStorage.getItem('idusu');
-    var refer = this.db.collection('todos', ref => ref.where('usuario', '==', usuid)).get().subscribe(res => console.log(res) ) ;
-    console.log(refer);
   }
 
   signOut() {
