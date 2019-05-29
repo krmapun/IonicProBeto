@@ -3,34 +3,60 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+
     <ion-title>
-      <img class="home-img" src="../../assets/images/text_chronex2.png" />
+      <img
+        class="home-img"
+        src="../../assets/images/text_chronex2.png"
+      >
     </ion-title>
+
     <ion-buttons slot="end">
-      <ion-button icon-only (click)="signOut()">
+      <ion-button
+        icon-only="icon-only"
+        (click)="signOut()"
+      >
         <ion-icon name="log-out"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header> 
+</ion-header>
 
 <ion-content>
-    <ul *ngFor="let task of tasks | async">
-      <h1>Lista de tareas y horas</h1>
-      <li *ngFor="let item of items | async">
-        <ion-row>
-          <ion-col>
-              <p>{{ item.priority }} h</p>
-          </ion-col>
-          <ion-col>
-              <p>{{item.task}}</p>
-          </ion-col>
-      </ion-row>
+  <!-- <ion-item>
+    <ion-label text-wrap="text-wrap">
+      <ion-text color="primary">
+          <h3>Costo total del desarrollo</h3>
+        </ion-text>
+        <ion-text color="secondary">
+          <p></p>
+        </ion-text> 
+    </ion-label>
+  </ion-item> -->
+
+  <ul *ngFor="let task of tasks | async">
+    <ion-item>
+      <ion-label text-wrap="text-wrap">Lista de tareas y horas</ion-label>
+    </ion-item>
+
+    <li *ngFor="let item of items | async">
       <ion-row>
-          <ion-col>
-              <p>$  {{ task.salarioxhora * item.priority }}</p>
-          </ion-col>
+        <ion-col>
+          <p>{{ item.priority }} h</p>
+        </ion-col>
+
+        <ion-col>
+          <p>{{item.task}}</p>
+        </ion-col>
       </ion-row>
-      </li>
-    </ul>
+
+      <ion-row>
+        <ion-col>
+          <p>
+            $ {{ task.salarioxhora * item.priority }}
+          </p>
+        </ion-col>
+      </ion-row>
+    </li>
+  </ul>
 </ion-content>
