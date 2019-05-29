@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'task', loadChildren: './pages/task/task.module#TaskPageModule' },
   { path: 'acercade', loadChildren: './pages/acercade/acercade.module#AcercadePageModule' },
   { path: 'guia', loadChildren: './pages/guia/guia.module#GuiaPageModule' },
-  { path: 'calculador', loadChildren: './pages/calculador/calculador.module#CalculadorPageModule' }
+  { path: 'calculador', loadChildren: './pages/calculador/calculador.module#CalculadorPageModule' },
+  { path: 'reportes', loadChildren: './pages/reportes/reportes.module#ReportesPageModule' }
 ];
 
 @NgModule({

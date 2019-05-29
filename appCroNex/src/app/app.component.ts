@@ -27,7 +27,7 @@ export class AppComponent {
     },
     {
       title: 'Resumen',
-      url: '',
+      url: '/reportes',
       icon: 'filing'
     },
     {

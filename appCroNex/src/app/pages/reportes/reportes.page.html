@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img class="home-img" src="../../assets/images/text_chronex2.png" />
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button icon-only (click)="signOut()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+    <ul *ngFor="let task of tasks | async">
+      <h1>Lista de tareas y horas</h1>
+      <li *ngFor="let item of items | async">
+        <ion-row>
+          <ion-col>
+              <p>{{ item.priority }} h</p>
+          </ion-col>
+          <ion-col>
+              <p>{{item.task}}</p>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <p>$  {{ task.salarioxhora * item.priority }}</p>
+          </ion-col>
+      </ion-row>
+      </li>
+    </ul>
+</ion-content>

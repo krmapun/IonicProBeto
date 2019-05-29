@@ -20,21 +20,20 @@
     </ion-card-header>
   
     <ion-card-content>
-        <form 
-        >
+      <form #CalcForm="ngForm">
         <ion-row>
           <ion-col align-self-start >
             <ion-item>
               <ion-label position="floating"><h3>Salario Mensual neto pretendido</h3></ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-input type="number" [(ngModel)]="calc.salario" name="salario" required="required"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col align-self-start >
             <ion-item>
-              <ion-label position="floating"><h4>Computador (cada 2 años)</h4></ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-label position="floating"><h4>Computador (cada año)</h4></ion-label>
+              <ion-input type="number" [(ngModel)]="calc.pc" name="pc" required="required"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -42,13 +41,13 @@
             <ion-col align-self-start size="6">
               <ion-item>
                 <ion-label position="floating"><h3>Alquiler</h3></ion-label>
-                <ion-input type="number"></ion-input>
+                <ion-input type="number" [(ngModel)]="calc.alquiler" name="alquiler" required="required"></ion-input>
               </ion-item>
             </ion-col>
             <ion-col align-self-start size="6">
               <ion-item>
                 <ion-label position="floating"><h3>Télefono/Internet</h3></ion-label>
-                <ion-input type="number"></ion-input>
+                <ion-input type="number" [(ngModel)]="calc.telinter" name="telinter" required="required"></ion-input>
               </ion-item>
             </ion-col>
         </ion-row>
@@ -56,13 +55,13 @@
             <ion-col align-self-start size="6">
               <ion-item>
                 <ion-label position="floating"><h3>Transporte</h3></ion-label>
-                <ion-input type="number"></ion-input>
+                <ion-input type="number" [(ngModel)]="calc.transporte" name="transporte" required="required"></ion-input>
               </ion-item>
             </ion-col>
             <ion-col align-self-start size="6">
               <ion-item>
                 <ion-label position="floating"><h3>Alimentación</h3></ion-label>
-                <ion-input  type="number"></ion-input>
+                <ion-input  type="number" [(ngModel)]="calc.alimentacion" name="alimentacion" required="required"></ion-input>
               </ion-item>
             </ion-col>
         </ion-row>
@@ -70,13 +69,13 @@
             <ion-col align-self-start size="6">
               <ion-item>
                 <ion-label position="floating"><h3>Software</h3></ion-label>
-                <ion-input type="number"></ion-input>
+                <ion-input type="number" [(ngModel)]="calc.software" name="software" required="required"></ion-input>
               </ion-item>
             </ion-col>
             <ion-col align-self-start size="6">
               <ion-item>
                 <ion-label position="floating"><h3>Salud/Pensión</h3></ion-label>
-                <ion-input type="number"></ion-input>
+                <ion-input type="number" [(ngModel)]="calc.salud" name="salud" required="required"></ion-input>
               </ion-item>
             </ion-col>
         </ion-row>
@@ -84,13 +83,13 @@
           <ion-col align-self-start size="6">
             <ion-item>
               <ion-label position="floating"><h3>Impuestos</h3></ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-input type="number" [(ngModel)]="calc.impuestos" name="impuestos" required="required"></ion-input>
             </ion-item>
           </ion-col>
           <ion-col align-self-start size="6">
             <ion-item>
               <ion-label position="floating"><h3>Educación</h3></ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-input type="number" [(ngModel)]="calc.educacion" name="educacion" required="required"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -98,18 +97,22 @@
           <ion-col align-self-start size="6">
             <ion-item>
               <ion-label position="floating"><h3>Personales</h3></ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-input type="number" [(ngModel)]="calc.personales" name="personales" required="required"></ion-input>
             </ion-item>
           </ion-col>
           <ion-col align-self-start size="6">
             <ion-item>
               <ion-label position="floating"><h3>otros</h3></ion-label>
-              <ion-input required type="number"></ion-input>
+              <ion-input required type="number" [(ngModel)]="calc.otros"  name="otros" required="required"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
-        <ion-button ion-button type="submit" expand="full" >Calcular</ion-button>
-        </form>
+        <ion-button ion-button 
+        [disabled]="!CalcForm.form.valid"
+        block="block" 
+        (click)="logForm()"
+        expand="full" >Calcular</ion-button>
+      </form>
     </ion-card-content>
   </ion-card>
 </ion-content>
